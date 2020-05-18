@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block pets-list %}
+    <div class="slider">
+        <ul class="slides">
+            {% for pet in object_list %}
+                <li>
+                    <img src="{{ pet.Photo.url }}" alt="Pet slider">
+                    <div class="caption center-align">
+                        <h3>{{ pet.Name}}</h3>
+                        <h5 class="light grey-text text-lighten-3">Give Me Home, Please :)</h5>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {% for pet in object_list %}
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ pet.Photo.url }}" alt="Pet Photo">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">
+                            {{ pet.Name }}
+                            <i class="material-icons right">more_vert</i></span>
+                            <p><a href="{% url 'pet-detail' pet.id %}">More information</a></p>
+                        </div>
+                        <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">
+                            <b>Breed:</b>{{ pet.Breed }}
+                            <i class="material-icons right">close</i>
+                        </span>
+                            <p><b>Name:</b> {{ pet.Name }}</p>
+                            <p><b>Description:</b> {{ pet.Description }}</p>
+                            <p><b>Get date:</b> {{ pet.Get_date }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

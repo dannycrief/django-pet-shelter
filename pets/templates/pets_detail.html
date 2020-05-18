@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block pets-detail %}
+    <div class="container">
+        <div class="row">
+            {% for pet in object %}
+                <div class="col s12 m3 l7">
+                    <img class="materialboxed" src="{{ pet.Photo.url }}" alt="Pet Photo">
+                </div>
+                <div class="col s12 m3 l5">
+                    <p>{{ pet.Name }}</p>
+                    <p>{{ pet.Description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

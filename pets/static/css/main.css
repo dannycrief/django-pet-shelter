@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.slider {*/
+/*    height: calc(100vh - 65px) !important;*/
+/*}*/
+
+/*.slides {*/
+/*    height: calc(100vh - 100px) !important;;*/
+/*}*/

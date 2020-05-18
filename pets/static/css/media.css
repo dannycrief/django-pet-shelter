@@ -1,0 +1,108 @@
+/*@media only screen and (min-width: 1023px) {*/
+/*    .card {*/
+/*        max-height: 290px;*/
+/*    }*/
+/*}*/
+
+/*@media only screen and (min-width: 993px) {*/
+/*    .card {*/
+/*        max-height: 285px;*/
+/*    }*/
+/*}*/
+
+/*@media only screen and (min-width: 601px) {*/
+/*    .card {*/
+/*        max-height: 265px;*/
+/*    }*/
+/*}*/
+
+/*=======================================================*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+    .card .card-image img {
+        max-height: 140px;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width: 321px) {
+    .card .card-image img {
+        max-height: 200px;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width: 320px) {
+    .card .card-image img {
+        max-height: 140px;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+    .card .card-image img {
+        max-height: 140px;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape) {
+    .card .card-image img {
+        max-height: 90px;
+        /*width: 100px;*/
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+    .card .card-image img {
+        max-height: 220px;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width: 1224px) {
+    .card .card-image img {
+        max-height: 140px;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width: 1824px) {
+    .card .card-image img {
+        max-height: 140px;
+    }
+
+    .slider {
+        height: calc(100vh - 65px) !important;
+    }
+
+    .slides {
+        height: calc(100vh - 100px) !important;;
+    }
+    .container.contact {
+        width: 50%;
+    }
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    /*.card .card-image img {*/
+    /*    max-height: 50px;*/
+    /*}*/
+}

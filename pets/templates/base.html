@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Pet Shelter</title>
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav class="red lighten-2">
+        <div class="nav-wrapper">
+            <a href="{% url 'pet-list' %}" class="brand-logo">Give Them Home</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{% url 'pet-list' %}">All pets</a></li>
+                <li><a href="{% url 'cat-list' %}">Cats</a></li>
+                <li><a href="{% url 'dog-list' %}">Dogs</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="{% url 'pet-list' %}">All pets</a></li>
+    <li><a href="{% url 'cat-list' %}">Cats</a></li>
+    <li><a href="{% url 'dog-list' %}">Dogs</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    <li><a href="{% url 'about' %}">About Us</a></li>
+</ul>
+
+<main>
+    {% block cats-list %}{% endblock %}
+    {% block pets-list %}{% endblock %}
+    {% block pets-detail %}{% endblock %}
+    {% block about %}{% endblock %}
+    {% block contact %}{% endblock %}
+
+</main>
+
+<footer class="page-footer  red lighten-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Give Them Home</h5>
+                <p class="grey-text text-lighten-4">You can give them home just in one click.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#">More Links</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
