@@ -7,7 +7,7 @@
                 <li>
                     <img src="{{ pet.Photo.url }}" alt="Pet slider">
                     <div class="caption center-align">
-                        <h3>{{ pet.Name}}</h3>
+                        <h3>{{ pet.Name }}</h3>
                         <h5 class="light grey-text text-lighten-3">Give Me Home, Please :)</h5>
                     </div>
                 </li>
@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row">
             {% for pet in object_list %}
-                <div class="col s12 m6 l3">
+                <div class="col s12 m12 l3">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator" src="{{ pet.Photo.url }}" alt="Pet Photo">

@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import get_list_or_404, redirect, render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -29,8 +30,11 @@ def contact(request):
 
         send_mail(subject, massage, email, ['step.kozbvb@gmail.com'])
 
-        context = {'form': form}
-        return render(request, 'pets_list.html', context)
+        context = {
+            'form': form,
+            'message': messages.success(request, 'Message was successfully sent.')
+        }
+        return render(request, 'contact.html', context)
     else:
         context = {'form': form}
         return render(request, 'contact.html', context)

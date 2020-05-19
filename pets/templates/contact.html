@@ -1,5 +1,22 @@
 {% extends 'base.html' %}
 {% block contact %}
+    {% if messages %}
+
+        <div class="col s12 m7">
+            <div class="card horizontal">
+                <div class="card-stacked">
+                    <div class="card-content">
+                        {% for message in messages %}
+                            <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="card-action">
+                        <a href="{% url 'pet-list' %}">Go to main page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
     <div class="container contact">
         <div class="row">
             <form class="col s12 m12 l12" method="post">
