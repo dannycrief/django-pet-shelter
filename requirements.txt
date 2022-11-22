@@ -1,3 +1,3 @@
 django==3.0.6
 dj_database_url
-Pillow==7.1.2
+Pillow==9.3.0
